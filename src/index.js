@@ -9,10 +9,16 @@ worker.start();
 
 const rootElement = document.getElementById("root");
 
-ReactDOM.render(
-    <App />, 
-    rootElement
-);
+ReactDOM.render(<App />, rootElement)
+
+const { worker } = require("./mocks/browser");
+ worker.start();
+
+ const store = createStore(reducer, applyMiddleware(logger, thunk));
+
+ const rootElement = document.getElementById("root");
+
+ ReactDOM.render()
 
 //Task List:
 //1. Add in all necessary components and libary methods.

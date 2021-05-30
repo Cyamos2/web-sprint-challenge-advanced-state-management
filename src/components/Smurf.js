@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from "react";
 
-const Smurf = (props)=> {
-    const { smurf } = props;
+import SmurfContext from "./../context/SmurfContext";
+
+const Smurfs = () => {
+    const smurf = useContext(SmurfContext);
     
-    return(<div data-testid="smurf" className="card">
+    return(
+        <div data-testid="smurf" className="card">
         <div className="card-body">
         <h3 className="card-title">{smurf.name}</h3>
             <hr/>
@@ -14,4 +17,4 @@ const Smurf = (props)=> {
     </div>);
 }
 
-export default Smurf;
+export default Smurfs;
