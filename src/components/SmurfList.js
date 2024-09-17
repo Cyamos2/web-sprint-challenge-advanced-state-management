@@ -1,5 +1,9 @@
-import React from 'react';
-import Smurf from './Smurf';
+import React, { useContext } from "react";
+import SmurfContext from "../contexts/SmurfContext";
+
+import Smurf from "../contexts/SmurfContext";
+import { connect } from "react-redux";
+import { fetchSmurf, fetchFail } from "./../actions";
 
  const SmurfList = ()=> {
     const isLoading = false;
